@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- uso secuencia, uso en cascada-->
+    <meta charset="UTF-8">
+    <title>Uso Html con css</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <style>
+       .border{
+           border: black solid 2px;
+       }
+    </style>
+</head>
+<body>
+   <h1>hola</h1>
+    <div class="container" style="background-color:red">
+        <h1>hola</h1>
+    </div>
+    <!--.row*3>h1-->
+    <div class="row" style="background-color:green">
+        <h1>fila1</h1>
+    <div class="col-md-4 border">
+        <h2>a</h2>
+        </div>
+    <div class="col-md-4 border">
+        <h2>b</h2>
+    </div>
+    <div class="col-md-4 border">
+        <h2>c</h2>
+    </div>    
+    </div>
+    <div class="row" style="background-color:yellow">
+        <h1>fila2</h1>
+        <!--.col-sm-3.border*4>h3-->
+        <div class="col-sm-3 border">
+            <h3>Csm-3 1</h3>
+        </div>
+        <div class="col-sm-3 border">
+            <h3>Csm-3 2</h3>
+        </div>
+        <div class="col-sm-3 border">
+            <h3>Csm-3 3</h3>
+        </div>
+        <div class="col-sm-3 border">
+            <h3>Csm-3 4</h3>
+        </div>
+    </div>
+    </div>
+    <div class="row" style="background-color:#bd7a7a">
+        <h1>fila3</h1>
+        <div class="col-lg-6 border">
+            <h3>CLG6 -1</h3>
+        </div>
+        <div class="col-lg-6 border">
+            <h3>CLG6 -2</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2 border">
+            <h2>XS 1</h2>
+        </div>
+        <div class="col-xs-5 border">
+            <h2>XS 2</h2>
+        </div>
+        <div class="col-xs-5 border">
+            <h2>XS 3</h2>
+        </div>
+    </div>
+    
+</body>
+ 
+</html>
