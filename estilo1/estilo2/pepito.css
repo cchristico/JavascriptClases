@@ -1,0 +1,25 @@
+ html{
+            background-color: #AAFF;
+        }
+        body{
+            background-color: #AACC;
+        }
+        h1{
+            background-color: #AFCC;
+        }
+        /*clases*/
+        .nombreClaseRojo{
+            background-color: red;
+        }
+        .nombreClaseAmarillo{
+            background-color: yellow;
+        }
+        .nombreClaseAzul{
+            background-color: blue;
+        }
+        /*
+        POR ID
+        */
+        #parrafoVerde{
+            background-color: green
+        }
