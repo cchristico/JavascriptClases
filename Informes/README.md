@@ -143,59 +143,35 @@ El resultado es el sigueinte:
 <img src="imagen_doc_html">
 </p>
 
-Se pueden usar imágenes desde nuestros archivos en github que constan de la siguiente URL:
-
-- Github
-  * La url de github que es `https://github.com` 
-- Usuario
-  * La url de usuario de github que en este caso es: `/adrianeguez` 
-- Repositorio
-  * El repositorio de Github que estamos usando, en este caso es `/Tec_Web_Js_2016_B`
-- Rama o  Branch
-  * La rama de nuestro repositorio en este formato: `/blob/master`
-- El PATH
-  * La direccíon de nuesto archivo por ejemplo `/carpeta/subcarpeta/subsubcarpeta/archivo.png` en este ejemplo es `/Ejemplo%20de%20un%20Informe/Imagenes/Flujograma.png` 
-- RAW
-  * Por ultimo mandamos un Query String Parameter de la con la variable `raw` y valor `true` de la siguiente manera: `?raw=true`
-  
-**Al final** nuestro url queda de la siguiente manera:
-
-#### `https://github.com/adrianeguez/Tec_Web_Js_2016_B/blob/master/Ejemplo%20de%20un%20Informe/Imagenes/Flujograma.png?raw=true`
-
+### Levantar el servidor http
+Se debe ingresar a la ruta dode se encuentra nuestro archivo html y abrir una termianl y digitar lo sigueitne:
+```
+$ http-server
+```
+La terminal nos muestra que el servidor se encuntra corriendo:
 <p align="center">
-<img src="https://github.com/adrianeguez/Tec_Web_Js_2016_B/blob/master/Ejemplo%20de%20un%20Informe/Imagenes/Flujograma.png?raw=true" width="500" height="800">
+<img src="imagen_servidor_http">
 </p>
 
-Por ultimo podemos centrar las imagenes de la siguiente manera:
-
+Para acceder al servidor se debe ingresar la sigueinte direccion en el navegador:
 
 ```
+http://localhost:8080/
+```
+### Métodos y Códigos de estado HTTP
+Una vez levantado el servidor ya ccedido a nuestra página web, podemos inspeccionar nuestra pagina web, con esto se puede verificar la comunicacion con el servidor el tiempo de respuesta del servidor...
 <p align="center">
-
-<img src="https://github.com/adrianeguez/Tec_Web_Js_2016_B/blob/master/Ejemplo%20de%20un%20Informe/Imagenes/Flujograma.png?raw=true" width="500" height="800">
-
+<img src="imagen_metodoshttp_codigos_http">
 </p>
-```
-
-### Links dentro de github
-
-Para nosotros utilizar los Links dentro de Github debemos de hacer dos cosas:
-
-1. Definir un anchor name donde nosotros queramos mover cuando demos clic de la siguiente manera y formate (**NOTESE QUE ESTAN JUNTAS**):
-
-  ```
-  <a name="nombre"></a>
-  ## titulo2
-  ```
-2. Después de esto debemos de linkear mediante un texto por ejemplo en una lista de la siguiente manera (**NO ELVIDAR EL `#`**):
- 
-  ```
-  - <a href="#nombre">Dale clic aqui para ir al titulo 2</a>
-  ```
-  <a name="conrec"></a>
-
-<br>
-<a href="#cabecera">A la cabecera</a>
+Se puede verificar otro método http y la respuesta del servidor, para esto se utiliza la extención de chrome postman.
+Se ingresa a la api de pokemon, esta permite realizar peticiones get.
+<p align="center">
+<img src="imagen_pokemon_ok">
+</p>
+Si se hace una peticion con otro método, nos muestra un error.
+<p align="center">
+<img src="imagen_pokemon_bad">
+</p>
 
 ## Conclusiones y Recomendaciones
 
