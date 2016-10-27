@@ -76,7 +76,7 @@ Un cliente interactúa con los servidores web a través de una aplicación espec
 | :------- | :------: |
 | __100__ _(Continue)_   | el navegador puede continuar realizando su petición (se utiliza para indicar que la primera parte de la petición del navegador se ha recibido correctamente).       |
 | __200__ _(OK)_   | la petición del navegador se ha completado con éxito.       |
-| __203__ _ (Non-Authoritative Information)_   | la petición se ha completado con éxito, pero su contenido no se ha obtenido de la fuente originalmente solicitada sino de otro servidor.       |
+| __203__ _(Non-Authoritative Information)_   | la petición se ha completado con éxito, pero su contenido no se ha obtenido de la fuente originalmente solicitada sino de otro servidor.       |
 | __400__ _(Bad Request)_   | el servidor no es capaz de entender la petición del navegador porque su sintaxis no es correcta.      |
  <br>
     Lo fundamental de la Web es que toda la infromacion se encuentra representada por docuemntos, la mayor parte de estos documentos estan expresados en un lenguaje especial llamado __HyperText Markuo Languaje__ o simplificado _HTML_. Se dice que es un lenguaje de marcado ya que _HTML_ provee palabras clave que permiten estructurar al documento en diferentes secciones.
@@ -123,7 +123,25 @@ Las paginas actuales poseen variedades de estilos, estos estilos son implementad
 <a name="desarrollo"></a>
 ## Desarrollo del informe
 
-### Imagenes desde Github **IMPORTANTE**
+### Instalación de Node en linux:
+Se utiliza el sistema iperativo Manjaro, se utiliza el gestor de paquetes yaourt
+```
+$ yaourt -S node
+
+```
+<p align="center">
+<img src="imagen_node_instalacion">
+</p>
+
+### Primer archivo HTML
+Se usa el editor Brackets, el cual gracias a sus extenciones nos permite crear archivos html de manera rapida, solo basta con digitar
+```
+html:5+Tab
+```
+El resultado es el sigueinte:
+<p align="center">
+<img src="imagen_doc_html">
+</p>
 
 Se pueden usar imágenes desde nuestros archivos en github que constan de la siguiente URL:
 
