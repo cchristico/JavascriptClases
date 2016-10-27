@@ -130,7 +130,7 @@ $ yaourt -S node
 
 ```
 <p align="center">
-<img src="imagen_node_instalacion">
+<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/instalacionNode.png?raw=true">
 </p>
 
 ### Primer archivo HTML
@@ -140,7 +140,7 @@ html:5+Tab
 ```
 El resultado es el sigueinte:
 <p align="center">
-<img src="imagen_doc_html">
+<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/docHTML.png?raw=true">
 </p>
 
 ### Levantar el servidor http
@@ -150,7 +150,7 @@ $ http-server
 ```
 La terminal nos muestra que el servidor se encuntra corriendo:
 <p align="center">
-<img src="imagen_servidor_http">
+<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/servidor_http.png?raw=true">
 </p>
 
 Para acceder al servidor se debe ingresar la sigueinte direccion en el navegador:
@@ -161,30 +161,30 @@ http://localhost:8080/
 ### Métodos y Códigos de estado HTTP
 Una vez levantado el servidor ya ccedido a nuestra página web, podemos inspeccionar nuestra pagina web, con esto se puede verificar la comunicacion con el servidor el tiempo de respuesta del servidor...
 <p align="center">
-<img src="imagen_metodoshttp_codigos_http">
+<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/tiempo_codigo_http.png?raw=true">
 </p>
 Se puede verificar otro método http y la respuesta del servidor, para esto se utiliza la extención de chrome postman.
 Se ingresa a la api de pokemon, esta permite realizar peticiones get.
 <p align="center">
-<img src="imagen_pokemon_ok">
+<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/api_pokemon_ok.png?raw=true">
 </p>
 Si se hace una peticion con otro método, nos muestra un error.
 <p align="center">
-<img src="imagen_pokemon_bad">
+<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/pokemon_bad.png?raw=true">
 </p>
 
 ## Conclusiones y Recomendaciones
 
-- Se recomienda mejorar la presentacion
-- Se recomienda usar el ir a cabecera despues de terminar una seccion
-- Se aprendio el uso de HTML con Markdown
-- Conocimos herramientas de desarrollo web como postman e inspector web
-- Desarrollamos conocimientos de introducción Web
+- Doctype permite determinar que tipo de estandar se va a utilizar, y como van a ser interpretados los archivos dentro del navegador.
+- Tanto HTML como XML utilizan etiquetas para determinar la sintaxis de sus docuemntos.
+- EL uso de un servidor http-local nos permite determianr el timpo de respuesta de nuestra página, ya que si se abre el archivo html con el navegador, el inspector no indica ningun timpo de respuesta.
+- El anvegador permite inspeccionar las páginas web, esto ayuda a determianr como se comunica el cliente con el servidor, asi como previsualziar cambios que se pueden realizar al código.
+- Es importante conocer los diferentes códigos de estado HTTP, asi como los diferentes métodos HTTP, para poder interpretar la infromacion del inspector del navegador.
+- Los cambios echos mediante el inspector del navegador deben ser realizados en el archi HTLM sino estos se perderan.
 
 <br>
 <a href="#cabecera">A la cabecera</a>
 
 
-# ¡Gracias por su atención!
 
-Author: [Adrian Eguez](https://github.com/adrianeguez)
+Author: [Christian Castillo](https://github.com/cchristico)
