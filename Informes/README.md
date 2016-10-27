@@ -39,12 +39,12 @@ El tema de la práctica es: `Introduccion a la Web`
 ### Internet
 La "Internet" es una colección de miles de redes de computadoras interconectadas en todo el mundo mediante cables y señales de telecomunicaciones, que utilizan una tecnología común para la transferencia de datos.
 ### World Wide Web
-<p>La __WWW__ puede ser visto como un enorme sistema dstribuido constituido por millones de clienetes y servidores que acceden a documentos enlazados. Los servidores mantienen una colleccion de documentos, mientras que los clientes proporcionan a los usuarios una interfaz fácl de usar.</p>
+La __WWW__ puede ser visto como un enorme sistema dstribuido constituido por millones de clienetes y servidores que acceden a documentos enlazados. Los servidores mantienen una colleccion de documentos, mientras que los clientes proporcionan a los usuarios una interfaz fácl de usar.
 
 #### Descripción general de WWW
 Ya que se menciono que la __WWW__ es una gran sistema de cleinte servidor con millones de servidores distribuidos. Cada servidor mantin una colección de documentos, cada documento es almacenado com un archivo(Algunos docuemntos pueden ser generado mediante solicitudes). 
-<p>Un servidor acepta solicitudes para ir a buscar un documento y lo transfiere al cliente. Además, también puede aceptar solicitudes para el almacenamiento de documentos nuevos.
-La forma más sencilla de hacer referencia a un documento es por medio de una referencia llaman un Localizador Uniforme de Recursos (URL). En él se especifica donde se encuentra un documento, a menudo mediante la incorporación del nombre __DNS__ de su servidor asociado, junto con un nombre de archivo mediante el cual el servidor puede consultar el documento en su sistema de archivos local. Además, una URL especifica el protocolo de nivel de aplicación para transferir el documento a través de la red.</p>
+Un servidor acepta solicitudes para ir a buscar un documento y lo transfiere al cliente. Además, también puede aceptar solicitudes para el almacenamiento de documentos nuevos.
+La forma más sencilla de hacer referencia a un documento es por medio de una referencia llaman un Localizador Uniforme de Recursos (URL). En él se especifica donde se encuentra un documento, a menudo mediante la incorporación del nombre __DNS__ de su servidor asociado, junto con un nombre de archivo mediante el cual el servidor puede consultar el documento en su sistema de archivos local. Además, una URL especifica el protocolo de nivel de aplicación para transferir el documento a través de la red.
 Ejemplo de esto es el protocolo http __Hypertext Transfer Protocol__, algunas peticiones utilizadas por este protoclo son las sigueintes:
 <table>
     <tr>
@@ -52,53 +52,37 @@ Ejemplo de esto es el protocolo http __Hypertext Transfer Protocol__, algunas pe
     <td><h3>Función</h3></td>
     </tr>
     <tr>
-        <td>__GET__</td>
+    <td><h5>GET</h5></td>
         <td> Pide una representación del recurso especificado.</td>
     </tr>
     <tr>
-        <td>__POST__</td>
+        <td><h5>POST</h5></td>
         <td>Envía los datos para que sean procesados por el recurso identificado.</td>
     </tr>
     <tr>
-        <td>__PUT__</td>
+        <td><h5>PUT</h5></td>
         <td>Sube, carga o realiza un upload de un recurso especificado (archivo), es el camino más eficiente para subir archivos a un servidor, esto es porque en POST utiliza un __mensaje multiparte__ y el mensaje es decodificado por el servidor. </td>
     </tr>
     <tr>
-        <td>__DELETE__</td>
+        <td><h5>DELETE</h5></td>
         <td>Borra el recurso especificado.</td>
     </tr>
 </table>
 
 Un cliente interactúa con los servidores web a través de una aplicación especial conocido como un __navegador__. Un navegador se encarga de mostrar adecuadamente un documento. También, un explorador acepta la entrada de un usuario sobre todo al permitir que el usuario seleccione una referencia a otro documento.
     Como se vio existen métodos http, que permiten al servidor atender a las peticiones del cliente, a mas de exto existen __códigos HTTP__ que permiten notificar al navegador sobre el estado de la comunicacion, en la sigueinte tabla se muestran algunos de estos _códigos de estado HTTP_.
- 
-<table>
-    <tr>
-    <td><h3>Código de estado</h3></td>
-    <td><h3>Descripción</h3></td>
-    </tr>
-    <tr>
-        <td>__100__ _(Continue)_</td>
-        <td> el navegador puede continuar realizando su petición (se utiliza para indicar que la primera parte de la petición del navegador se ha recibido correctamente).</td>
-    </tr>
-    <tr>
-        <td>__200__ _(OK)_</td>
-        <td>la petición del navegador se ha completado con éxito.</td>
-    </tr>
-    <tr>
-        <td>__203__ _ (Non-Authoritative Information)_</td>
-        <td>la petición se ha completado con éxito, pero su contenido no se ha obtenido de la fuente originalmente solicitada sino de otro servidor.</td>
-    </tr>
-    <tr>
-        <td>__400__ _(Bad Request)_</td>
-        <td>el servidor no es capaz de entender la petición del navegador porque su sintaxis no es correcta.</td>
-    </tr>
-</table>
- <p>  
+    
+| Código de estado | Descripción |
+| :------- | :------: |
+| __100__ _(Continue)_   | el navegador puede continuar realizando su petición (se utiliza para indicar que la primera parte de la petición del navegador se ha recibido correctamente).       |
+| __200__ _(OK)_   | la petición del navegador se ha completado con éxito.       |
+| __203__ _ (Non-Authoritative Information)_   | la petición se ha completado con éxito, pero su contenido no se ha obtenido de la fuente originalmente solicitada sino de otro servidor.       |
+| __400__ _(Bad Request)_   | el servidor no es capaz de entender la petición del navegador porque su sintaxis no es correcta.      |
+ <br>
     Lo fundamental de la Web es que toda la infromacion se encuentra representada por docuemntos, la mayor parte de estos documentos estan expresados en un lenguaje especial llamado __HyperText Markuo Languaje__ o simplificado _HTML_. Se dice que es un lenguaje de marcado ya que _HTML_ provee palabras clave que permiten estructurar al documento en diferentes secciones.
     Desde la aparicion de este lenguaje a sido neesario crear estandares que permitan la interpretacion de archivos HTML por los navegadores, de esto seencuentra encargado ___World Wide Web Consortiun___. En la actualidad existen los sigueitnes estandares oficiales:
     
-</p>
+
 
 | Versión  |
 | :------- |
