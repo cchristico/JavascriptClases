@@ -182,7 +182,46 @@ Si se hace una peticion con otro método, nos muestra un error.
    <h1 style="background-color:#1ac9ae" >Caballeros del Zodiaco</h1>
 ```
 - El resultado es el sigueinte:
-<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/pokemon_bad.png?raw=true">
+<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/pagina_prueba.png?raw=true">
+</p>
+
+- Se puede ingresar vinculos a nuevas páginas para lo cual se utiliza lo siguiente:
+```
+   <a href="https://www.youtube.com/watch?v=_RsvsJnmB5Q">
+     <h2> Videos de Los caballeros del Zodiaco</h2>
+ </a>
+```
+- Se puede hacer links sobre imagenes, para lo cual se utiliza:
+```
+     <a href="https://www.youtube.com/watch?v=_RsvsJnmB5Q">
+<img src="http://im.ziffdavisinternational.com/ign_es/screenshot/default/caballeros-del-zodiaco610_hzbr.jpg">
+</a>
+```
+- El resultado es le sigueinte:
+<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/pagina_prueba.png?raw=true">
+</p>
+
+- Uso de listas, existe dos tipos de listas, las ordenadas y las no ordenadas.
+    - Para una no ordenada se utiliza:
+    ```
+    <ul>
+       <li><h4>Seiya </h4></li>
+       <li><h4>Shiryu</h4></li>
+       <li><h4>Hyoga</h4></li>
+       <li><h4>Shun </h4></li>
+   </ul>
+    ```
+    - Una lsita ordeanda se consigue con lo siguiente:
+    ```
+    <ol>
+       <li><h4>Seiya </h4></li>
+       <li><h4>Shiryu</h4></li>
+       <li><h4>Hyoga</h4></li>
+       <li><h4>Shun </h4></li>
+   </ol>
+    ```
+- El resultado es le sigueinte:
+<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/lista_numerada_nonumerada.png?raw=true">
 </p>
 
 ## Conclusiones y Recomendaciones
