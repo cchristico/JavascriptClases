@@ -173,6 +173,18 @@ Si se hace una peticion con otro método, nos muestra un error.
 <img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/pokemon_bad.png?raw=true">
 </p>
 
+- Primera página, para modificar el color del fondo se ingresa lo siguiente
+```
+<body style="background-color:#1fc725">
+```
+- Esto puede ser utilizado en diferetnes etiquetas como por ejemplo en h1,h2...
+```
+   <h1 style="background-color:#1ac9ae" >Caballeros del Zodiaco</h1>
+```
+- El resultado es el sigueinte:
+<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/pokemon_bad.png?raw=true">
+</p>
+
 ## Conclusiones y Recomendaciones
 
 - Doctype permite determinar que tipo de estandar se va a utilizar, y como van a ser interpretados los archivos dentro del navegador.
