@@ -37,7 +37,7 @@
         console.log(varUndeined);
         console.log(varNUll);*/
         
-        var arregloString=['1','2','3'];
+        /*var arregloString=['1','2','3'];
         console.log(arregloString);
         var arregloNumeros=[1,2,3];
         console.log(arregloNumeros);
@@ -45,8 +45,50 @@
         console.log(arregloFloat);
         var arregloNull=[null, null, null];
         console.log(arregloNull);
+        var arregloDeTodo=['Jose',
+                           'Matusalen',
+                           3.13,
+                           null,
+                           false,
+                           true,
+                           undefined,
+                           4];
+        console.log(arregloDeTodo);
+        console.log(arregloDeTodo.length);*/
         
+        /*Objetos*/
         
+        var christian={
+            'nombre':'Christian',
+            'apellido':'Castillo',
+             edad:25,
+            mascotas:['simurdiera','gato','perro'],
+            hermanos:[{
+                'nombre':'Rosa',
+                'apellido':'Paredes'},
+                {                
+                'nombre':'Bianca',
+                'apellido':'Paredes'
+            }],
+            getNombre:function(){
+            return this.nombre;
+        },
+            getApellido:function(){
+            return this.apellido;
+        },
+        setNombre:function(nuevoNombre){
+            this.nombre=nuevoNombre;
+        }
+        }
+        console.log(christian);
+        console.log(christian.nombre);
+        console.log(christian.apellido);
+        console.log(christian.edad);
+        console.log(christian.hermanos);
+        console.log("Funcion");
+        console.log(christian.getNombre());
+        christian.setNombre('Eduardo');
+        console.log(christian.nombre);
     </script>
 </head>
 <body>
