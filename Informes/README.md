@@ -198,7 +198,7 @@ Si se hace una peticion con otro método, nos muestra un error.
 </a>
 ```
 - El resultado es le sigueinte:
-<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/link_img_texto.png?raw=true">
+<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/pagina_prueba.png?raw=true">
 </p>
 
 - Uso de listas, existe dos tipos de listas, las ordenadas y las no ordenadas.
