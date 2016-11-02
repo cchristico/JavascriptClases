@@ -127,7 +127,7 @@ Una etiqueta dentro de nuestro código html puede tener un identificador id, est
         } 
 ```
 <p align="center">
-<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/servidor_http.png?raw=true">
+<img src="img-id-style">
 </p>
 
 Para acceder al servidor se debe ingresar la sigueinte direccion en el navegador:
