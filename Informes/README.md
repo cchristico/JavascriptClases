@@ -76,32 +76,56 @@ La tecnología CDN implica una red de servidores repartidos por todo el mundo. E
 <a name="desarrollo"></a>
 ## Desarrollo del informe
 
-### Instalación de Node en linux:
-Se utiliza el sistema iperativo Manjaro, se utiliza el gestor de paquetes yaourt
+## Uso de Style
+####- Uso de Style con tags
+Para agrear estilos como tags se ingresa el sigueinte código en el head del archivo HTML
 ```
-$ yaourt -S node
+<style> 
+        /*TAGS 
+            nombreTag{ 
+             
+        } 
+            */ 
+        html{ 
+            background-color: #AAFF; 
+        } 
+        body{ 
+            background-color: #AACC 
+        } 
+        h1{ 
+            background-color: #AFCC 
+        } 
+    </style> 
 
 ```
 <p align="center">
-<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/instalacionNode.png?raw=true">
+<img src="img_css_tag">
 </p>
 
-### Primer archivo HTML
-Se usa el editor Brackets, el cual gracias a sus extenciones nos permite crear archivos html de manera rapida, solo basta con digitar
+####- Uso de Style con clases
+Otra manera de utilizar Style es mediante clases, para esto se debe ingresar lo siguiente
 ```
-html:5+Tab
+        .nombreClaseRojo{ 
+            background-color: red; 
+        } 
+        .nombreClaseAmarillo{ 
+            background-color: yellow; 
+        } 
+        .nombreClaseAzul{ 
+            background-color: blue; 
+        } 
 ```
-El resultado es el sigueinte:
 <p align="center">
-<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/docHTML.png?raw=true">
+<img src="img_clases">
 </p>
 
-### Levantar el servidor http
-Se debe ingresar a la ruta dode se encuentra nuestro archivo html y abrir una termianl y digitar lo sigueitne:
+####- Uso de Style con identificadores
+Una etiqueta dentro de nuestro código html puede tener un identificador id, este id puede ayudar a colocar estilo, para lo cual se consigue con lo sigueinte:
 ```
-$ http-server
+       #parrafoVerde{ 
+            background-color: green 
+        } 
 ```
-La terminal nos muestra que el servidor se encuntra corriendo:
 <p align="center">
 <img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/servidor_http.png?raw=true">
 </p>
