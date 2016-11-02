@@ -99,7 +99,7 @@ Para agrear estilos como tags se ingresa el sigueinte código en el head del arc
 
 ```
 <p align="center">
-<img src="img_css_tag">
+<img src="https://github.com/cchristico/JavascriptClases/blob/02.CSS/Informes/Imagenes/estilos_html.png?raw=true">
 </p>
 
 ####- Uso de Style con clases
@@ -116,7 +116,7 @@ Otra manera de utilizar Style es mediante clases, para esto se debe ingresar lo 
         } 
 ```
 <p align="center">
-<img src="img_clases">
+<img src="https://github.com/cchristico/JavascriptClases/blob/02.CSS/Informes/Imagenes/estilos_clases.png?raw=true">
 </p>
 
 ####- Uso de Style con identificadores
@@ -127,27 +127,54 @@ Una etiqueta dentro de nuestro código html puede tener un identificador id, est
         } 
 ```
 <p align="center">
-<img src="img-id-style">
+<img src="https://github.com/cchristico/JavascriptClases/blob/02.CSS/Informes/Imagenes/estilo_id.png?raw=true">
 </p>
 
-Para acceder al servidor se debe ingresar la sigueinte direccion en el navegador:
-
+####- Uso de CSS en un archivo separado
+Para lo cual se crea un archivo nuevo con la extencion css, luedo se copia el contenido de Style del HTML.
 ```
-http://localhost:8080/
+ html{
+            background-color: #AAFF;
+        }
+        body{
+            background-color: #AACC;
+        }
+        h1{
+            background-color: #AFCC;
+        }
+        /*clases*/
+        .nombreClaseRojo{
+            background-color: red;
+        }
+        .nombreClaseAmarillo{
+            background-color: yellow;
+        }
+        .nombreClaseAzul{
+            background-color: blue;
+        }
+        /*
+        POR ID
+        */
+        #parrafoVerde{
+            background-color: green
+        }
 ```
-### Métodos y Códigos de estado HTTP
-Una vez levantado el servidor ya ccedido a nuestra página web, podemos inspeccionar nuestra pagina web, con esto se puede verificar la comunicacion con el servidor el tiempo de respuesta del servidor...
+Dentro del archivo HTML se ingresa los sigueinte
+```
+<link rel="stylesheet" href="estilos.css">
+```
+Si se desea acceder a hojas de estilos en otros directorios se puede usar lo sigueinte:
+```
+<link rel="stylesheet" href="estilo1/dilan.css"> 
+<link rel="stylesheet" href="estilo1/estilo2/pepito.css"> 
+```
+Para el uso de CDN se ingresa lo siguiente:
+```
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+```
+(Nota: esto se obtiene de la página de Bootstrap)
 <p align="center">
-<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/tiempo_codigo_http.png?raw=true">
-</p>
-Se puede verificar otro método http y la respuesta del servidor, para esto se utiliza la extención de chrome postman.
-Se ingresa a la api de pokemon, esta permite realizar peticiones get.
-<p align="center">
-<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/api_pokemon_ok.png?raw=true">
-</p>
-Si se hace una peticion con otro método, nos muestra un error.
-<p align="center">
-<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/pokemon_bad.png?raw=true">
+<img src="https://github.com/cchristico/JavascriptClases/blob/02.CSS/Informes/Imagenes/cdn_estilo.png?raw=true">
 </p>
 
 - Primera página, para modificar el color del fondo se ingresa lo siguiente
