@@ -177,65 +177,54 @@ Para el uso de CDN se ingresa lo siguiente:
 <img src="https://github.com/cchristico/JavascriptClases/blob/02.CSS/Informes/Imagenes/cdn_estilo.png?raw=true">
 </p>
 
-- Primera página, para modificar el color del fondo se ingresa lo siguiente
+####- Uso de columnas, en conjunto con bootstrap
+Para esto se pueden crear divcontenido estático de un sitio webersas combinaciones, lo importantes esque las divisiones que se creen sumen 12, asi se tiene:
 ```
-<body style="background-color:#1fc725">
+    <div class="row" style="background-color:green">
+        <h1>fila1</h1>
+    <div class="col-md-4 border">
+        <h2>a</h2>
+        </div>
+    <div class="col-md-4 border">
+        <h2>b</h2>
+    </div>
+    <div class="col-md-4 border">
+        <h2>c</h2>
+    </div>    
+    </div>
 ```
-- Esto puede ser utilizado en diferetnes etiquetas como por ejemplo en h1,h2...
+Otra combinacion puede ser:
 ```
-   <h1 style="background-color:#1ac9ae" >Caballeros del Zodiaco</h1>
+<div class="row" style="background-color:yellow">
+        <h1>fila2</h1>
+        <div class="col-sm-3 border">
+            <h3>Csm-3 1</h3>
+        </div>
+        <div class="col-sm-3 border">
+            <h3>Csm-3 2</h3>
+        </div>
+        <div class="col-sm-3 border">
+            <h3>Csm-3 3</h3>
+        </div>
+        <div class="col-sm-3 border">
+            <h3>Csm-3 4</h3>
+        </div>
+    </div>
 ```
-- El resultado es el sigueinte:
-<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/pagina_prueba.png?raw=true">
+Para poder delinear se debe ingresar lo sigueinte en la cabecera
+```
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+Con esto se obtiene lo sigueinte:
+<p align="center">
+<img src="https://github.com/cchristico/JavascriptClases/blob/02.CSS/Informes/Imagenes/columnas_bootstrap.png?raw=true">
 </p>
-
-- Se puede ingresar vinculos a nuevas páginas para lo cual se utiliza lo siguiente:
-```
-   <a href="https://www.youtube.com/watch?v=_RsvsJnmB5Q">
-     <h2> Videos de Los caballeros del Zodiaco</h2>
- </a>
-```
-- Se puede hacer links sobre imagenes, para lo cual se utiliza:
-```
-     <a href="https://www.youtube.com/watch?v=_RsvsJnmB5Q">
-<img src="http://im.ziffdavisinternational.com/ign_es/screenshot/default/caballeros-del-zodiaco610_hzbr.jpg">
-</a>
-```
-- El resultado es le sigueinte:
-<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/link_img_texto.png?raw=true">
-</p>
-
-- Uso de listas, existe dos tipos de listas, las ordenadas y las no ordenadas.
-    - Para una no ordenada se utiliza:
-    ```
-    <ul>
-       <li><h4>Seiya </h4></li>
-       <li><h4>Shiryu</h4></li>
-       <li><h4>Hyoga</h4></li>
-       <li><h4>Shun </h4></li>
-   </ul>
-    ```
-    - Una lsita ordeanda se consigue con lo siguiente:
-    ```
-    <ol>
-       <li><h4>Seiya </h4></li>
-       <li><h4>Shiryu</h4></li>
-       <li><h4>Hyoga</h4></li>
-       <li><h4>Shun </h4></li>
-   </ol>
-    ```
-- El resultado es le sigueinte:
-<img src="https://github.com/cchristico/JavascriptClases/blob/informe/Informes/Infrome_1/Imagenes/lista_numerada_nonumerada.png?raw=true">
-</p>
-
 ## Conclusiones y Recomendaciones
 
-- Doctype permite determinar que tipo de estandar se va a utilizar, y como van a ser interpretados los archivos dentro del navegador.
-- Tanto HTML como XML utilizan etiquetas para determinar la sintaxis de sus docuemntos.
-- EL uso de un servidor http-local nos permite determianr el timpo de respuesta de nuestra página, ya que si se abre el archivo html con el navegador, el inspector no indica ningun timpo de respuesta.
-- El anvegador permite inspeccionar las páginas web, esto ayuda a determianr como se comunica el cliente con el servidor, asi como previsualziar cambios que se pueden realizar al código.
-- Es importante conocer los diferentes códigos de estado HTTP, asi como los diferentes métodos HTTP, para poder interpretar la infromacion del inspector del navegador.
-- Los cambios echos mediante el inspector del navegador deben ser realizados en el archi HTLM sino estos se perderan.
+- La utilizacion de multiples archivos css, o multiples etilos sobre una etiqueta, hace que se utilice la ultima, es decir es secuencial en cascada.
+- La utilizacion de las hpjas de estilo por separado ayuda a dar mantenimiento a las páginas web.
+- El uso de CDN nos ayuda a almacenar el contenido estático de un sitio web, con esto nos permite ingresar a hojas de estilo cargadas en la web.
+- Se puede tener multiples hojas de estilo.
 
 <br>
 <a href="#cabecera">A la cabecera</a>
