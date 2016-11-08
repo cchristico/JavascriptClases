@@ -124,7 +124,7 @@
                 mountYear++;
             }*/
         
- var numSheep=4;
+/* var numSheep=4;
         var mountYear=1;
         var mounthsToPrint=12;
         console.log('There will be '+numSheep+' after ('+mountYear+')!');
@@ -133,13 +133,54 @@
             {
                 numSheep=numSheep*4;
                 console.log('There will be '+numSheep+' after('+mountYear+')!');
+                if(numSheep>10000)
+                    {
+                        
+                        console.log('Removing '+numSheep/2+' sheep from the population');
+                    }
                 
-            }
-        for(var i=0;i<10;i++)
+            }*/
+ /*       for(var i=0;i<10;i++)
             {
                 console.log(i);
             }
-        
+  */
+    /*    var count=10;
+        while(count!=0)
+            {
+                if(count%2==0)
+                    {
+                        console.log("El numero: "+count+" es par");        
+                    }
+        count--;
+            }*/
+         var numSheep=4;
+        var mountYear=1;
+        var mounthsToPrint=12;
+        console.log('There will be '+numSheep+' after ('+mountYear+')!');
+        mountYear=mountYear+1;
+        numSheep=numSheep*4;
+         for(mountYear;mountYear<mounthsToPrint;mountYear++)
+             {
+        if(mountYear%4==0){
+            numSheep=numSheep*0.75;
+            console.log('There will be '+numSheep+' after ('+mountYear+')!');
+        }
+        else{
+                   
+            
+                numSheep=numSheep*4;
+                console.log('There will be '+numSheep+' after('+mountYear+')!');
+                if(numSheep>10000)
+                    {
+                        
+                        console.log('Removing '+numSheep/2+' sheep from the population');
+                    }
+                
+            }
+            
+        }
+
     </script>
 </head>
 <body>
