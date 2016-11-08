@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -36,7 +37,7 @@
         console.log(booleanTrue);
         console.log(varUndeined);
         console.log(varNUll);*/
-        
+
         /*var arregloString=['1','2','3'];
         console.log(arregloString);
         var arregloNumeros=[1,2,3];
@@ -55,135 +56,162 @@
                            4];
         console.log(arregloDeTodo);
         console.log(arregloDeTodo.length);*/
-        
-        /*Objetos*/
-        
-       /* var christian={
-            'nombre':'Christian',
-            'apellido':'Castillo',
-             edad:25,
-            mascotas:['simurdiera','gato','perro'],
-            hermanos:[{
-                'nombre':'Rosa',
-                'apellido':'Paredes'},
-                {                
-                'nombre':'Bianca',
-                'apellido':'Paredes'
-            }],
-            getNombre:function(){
-            return this.nombre;
-        },
-            getApellido:function(){
-            return this.apellido;
-        },
-        setNombre:function(nuevoNombre){
-            this.nombre=nuevoNombre;
-        }
-        }
-        console.log(christian);
-        console.log(christian.nombre);
-        console.log(christian.apellido);
-        console.log(christian.edad);
-        console.log(christian.hermanos);
-        console.log("Funcion");
-        console.log(christian.getNombre());
-        christian.setNombre('Eduardo');
-        console.log(christian.nombre);*/
-     /*   var count=10;
-        var arregloVacio=[];
-        var objetoVacio={};
-       console.log("Inicia");
-        console.log(arregloVacio);
-        while(count!=0)
-            {
-                if(count%2==0)
-                    {
-                        console.log("El numero:"+count+"es par");        
-                    }
-                else{
-                        console.log("El numero:"+count+"es impar");        
-                }
-             //   console.log(count);
-                arregloVacio.push(count);
-                count--;
-            }
-        arregloVacio.pop(count);
-        arregloVacio.splice(9,1,11);
-                console.log("Termino");
-        console.log(arregloVacio);*/
-        
- /*       var numSheep=4;
-        var mountYear=1;
-        var mounthsToPrint=12;
-        console.log('There will be '+numSheep+'after ('+mountYear+')!');
-        while(mountYear<=mounthsToPrint)
-            {
-                numSheep=numSheep*4;
-                console.log('There will be '+numSheep+' after('+mountYear+')!');
-                
-                mountYear++;
-            }*/
-        
-/* var numSheep=4;
-        var mountYear=1;
-        var mounthsToPrint=12;
-        console.log('There will be '+numSheep+' after ('+mountYear+')!');
-        mountYear=mountYear+1;
-        for(mountYear;mountYear<mounthsToPrint;mountYear++)
-            {
-                numSheep=numSheep*4;
-                console.log('There will be '+numSheep+' after('+mountYear+')!');
-                if(numSheep>10000)
-                    {
-                        
-                        console.log('Removing '+numSheep/2+' sheep from the population');
-                    }
-                
-            }*/
- /*       for(var i=0;i<10;i++)
-            {
-                console.log(i);
-            }
-  */
-    /*    var count=10;
-        while(count!=0)
-            {
-                if(count%2==0)
-                    {
-                        console.log("El numero: "+count+" es par");        
-                    }
-        count--;
-            }*/
-         var numSheep=4;
-        var mountYear=1;
-        var mounthsToPrint=12;
-        console.log('There will be '+numSheep+' after ('+mountYear+')!');
-        mountYear=mountYear+1;
-        numSheep=numSheep*4;
-         for(mountYear;mountYear<mounthsToPrint;mountYear++)
-             {
-        if(mountYear%4==0){
-            numSheep=numSheep*0.75;
-            console.log('There will be '+numSheep+' after ('+mountYear+')!');
-        }
-        else{
-                   
-            
-                numSheep=numSheep*4;
-                console.log('There will be '+numSheep+' after('+mountYear+')!');
-                if(numSheep>10000)
-                    {
-                        
-                        console.log('Removing '+numSheep/2+' sheep from the population');
-                    }
-                
-            }
-            
-        }
 
+        /*Objetos*/
+
+        /* var christian={
+             'nombre':'Christian',
+             'apellido':'Castillo',
+              edad:25,
+             mascotas:['simurdiera','gato','perro'],
+             hermanos:[{
+                 'nombre':'Rosa',
+                 'apellido':'Paredes'},
+                 {                
+                 'nombre':'Bianca',
+                 'apellido':'Paredes'
+             }],
+             getNombre:function(){
+             return this.nombre;
+         },
+             getApellido:function(){
+             return this.apellido;
+         },
+         setNombre:function(nuevoNombre){
+             this.nombre=nuevoNombre;
+         }
+         }
+         console.log(christian);
+         console.log(christian.nombre);
+         console.log(christian.apellido);
+         console.log(christian.edad);
+         console.log(christian.hermanos);
+         console.log("Funcion");
+         console.log(christian.getNombre());
+         christian.setNombre('Eduardo');
+         console.log(christian.nombre);*/
+        /*   var count=10;
+           var arregloVacio=[];
+           var objetoVacio={};
+          console.log("Inicia");
+           console.log(arregloVacio);
+           while(count!=0)
+               {
+                   if(count%2==0)
+                       {
+                           console.log("El numero:"+count+"es par");        
+                       }
+                   else{
+                           console.log("El numero:"+count+"es impar");        
+                   }
+                //   console.log(count);
+                   arregloVacio.push(count);
+                   count--;
+               }
+           arregloVacio.pop(count);
+           arregloVacio.splice(9,1,11);
+                   console.log("Termino");
+           console.log(arregloVacio);*/
+
+        /*       var numSheep=4;
+               var mountYear=1;
+               var mounthsToPrint=12;
+               console.log('There will be '+numSheep+'after ('+mountYear+')!');
+               while(mountYear<=mounthsToPrint)
+                   {
+                       numSheep=numSheep*4;
+                       console.log('There will be '+numSheep+' after('+mountYear+')!');
+                       
+                       mountYear++;
+                   }*/
+
+        /* var numSheep=4;
+                var mountYear=1;
+                var mounthsToPrint=12;
+                console.log('There will be '+numSheep+' after ('+mountYear+')!');
+                mountYear=mountYear+1;
+                for(mountYear;mountYear<mounthsToPrint;mountYear++)
+                    {
+                        numSheep=numSheep*4;
+                        console.log('There will be '+numSheep+' after('+mountYear+')!');
+                        if(numSheep>10000)
+                            {
+                                
+                                console.log('Removing '+numSheep/2+' sheep from the population');
+                            }
+                        
+                    }*/
+        /*       for(var i=0;i<10;i++)
+                   {
+                       console.log(i);
+                   }
+         */
+        /*    var count=10;
+            while(count!=0)
+                {
+                    if(count%2==0)
+                        {
+                            console.log("El numero: "+count+" es par");        
+                        }
+            count--;
+                }*/
+  /*      var numSheep = 4;
+        var mountYear = 1;
+        var mounthsToPrint = 12;
+        console.log('There will be ' + numSheep + ' after (' + mountYear + ')!');
+        mountYear = mountYear + 1;
+        numSheep = numSheep * 4;
+        for (mountYear; mountYear < mounthsToPrint; mountYear++) {
+            if (mountYear % 4 == 0) {
+
+                numSheep = numSheep - (numSheep * 0.75);
+                console.log('mes' + mountYear + 'quita' + numSheep);
+                console.log('There will be ' + numSheep + ' after (' + mountYear + ')!');
+            } else {
+                numSheep = numSheep * 4;
+                console.log('There will be ' + numSheep + ' after(' + mountYear + ')!');
+                if (numSheep > 10000) {
+                    console.log('Removing ' + numSheep / 2 + ' sheep from the population');
+                }
+
+            }
+
+        }*/
+        
+    /*var respuesta = prompt('Cual es tu edad amigo');
+        console.log(parseInt(respuesta));
+      */
+       /* function mult3Vals(num1,num2,num3)
+        {
+            return num1*num2*num3;
+        }
+        console.log(mult3Vals(2,6,9));
+        */
+        
+        function maxOf2(num1,num2)
+        {
+            if(num1!=num2)
+                {
+                    if(num1>num2)
+                {
+                    return num1;
+                }
+            else {
+                return num2;
+            }
+            
+        }
+            else{
+                return num1;
+            }
+                }
+            
+        console.log(maxOf2(10,10));
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
