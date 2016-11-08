@@ -228,8 +228,20 @@
         console.log( typeof false);
         console.log( typeof undefined);
         
-      
-        
+      function funcionCarcularString(arreglo)
+        {
+            var numString=0;
+            for(var i=0;i<arreglo.length;i++)
+                {
+                    if(typeof arreglo[i]=='string')
+                        {
+                            numString++;
+                        }
+                }
+            return numString;
+        }
+        var arreglo=[1,'2',3,'4',5,'seis'];
+        console.log(funcionCarcularString(arreglo));
     </script>
 </head>
 
