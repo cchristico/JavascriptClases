@@ -58,7 +58,7 @@
         
         /*Objetos*/
         
-        var christian={
+       /* var christian={
             'nombre':'Christian',
             'apellido':'Castillo',
              edad:25,
@@ -88,7 +88,42 @@
         console.log("Funcion");
         console.log(christian.getNombre());
         christian.setNombre('Eduardo');
-        console.log(christian.nombre);
+        console.log(christian.nombre);*/
+     /*   var count=10;
+        var arregloVacio=[];
+        var objetoVacio={};
+       console.log("Inicia");
+        console.log(arregloVacio);
+        while(count!=0)
+            {
+                if(count%2==0)
+                    {
+                        console.log("El numero:"+count+"es par");        
+                    }
+                else{
+                        console.log("El numero:"+count+"es impar");        
+                }
+             //   console.log(count);
+                arregloVacio.push(count);
+                count--;
+            }
+        arregloVacio.pop(count);
+        arregloVacio.splice(9,1,11);
+                console.log("Termino");
+        console.log(arregloVacio);*/
+        
+        var numSheep=4;
+        var mountYear=1;
+        var mounthsToPrint=12;
+        console.log('There will be '+numSheep+'after ('+mountYear+')!');
+        while(mountYear<=mounthsToPrint)
+            {
+                numSheep=numSheep*4;
+                console.log('There will be '+numSheep+' after('+mountYear+')!');
+                
+                mountYear++;
+            }
+        
     </script>
 </head>
 <body>
