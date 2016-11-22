@@ -142,8 +142,8 @@ __Mal ejemplo__
 ## Elementos de encabezado
 Se debe considerar el uso de ```<h1>``` para títulos principales, ```<h2>``` y ```<h3>```, para títulos de niveles inferiores, al igual que la etiqueta title, el uso de ```<h1>``` permite a los motores de búsqueda encontrar a nuestra página web
 
-<p>
-    <img src="https://github.com/cchristico/JavascriptClases/blob/0.3Bootstrp/Informes/Infrome_3/imagenes/cabecera.png?raw=true" alt="imagen cabecera" width="300" height="300">
+<p aling="center">
+    <img src="https://github.com/cchristico/JavascriptClases/blob/0.3Bootstrp/Informes/Infrome_3/imagenes/cabecera.png?raw=true" alt="imagen cabecera" width="500" height="300">
 </p>
 
 ## Conjunto de caracteres
@@ -197,13 +197,13 @@ SEO(Search Engine Optimization)o en español optimización de motores de búsque
 Para trabajar con Bootstrap se puede descargar toda la libreria, o se puede usar el CDN, para lo cual se ingresa en el [link](http://getbootstrap.com/getting-started/#download)  se copia lo sigueinte en el ```<head>``` de nuestra página web.
 <p aling="center">
    
-    <img src="https://github.com/cchristico/JavascriptClases/blob/0.3Bootstrp/Informes/Infrome_3/imagenes/agregarBootstrap.png?raw=true" alt="imagen cabecera" width="300" height="300">
+    <img src="https://github.com/cchristico/JavascriptClases/blob/0.3Bootstrp/Informes/Infrome_3/imagenes/agregarBootstrappng.png?raw=true" alt="imagen cabecera" width="600" height="400">
 </p>
 
 - __Small__ permite crear texto a un nivel inferior al encabezado, es decir lo hace mas claro.
 <p aling="center">
    
-    <img src="https://github.com/cchristico/JavascriptClases/blob/0.3Bootstrp/Informes/Infrome_3/imagenes/usoSmall.png?raw=true" alt="imagen cabecera" width="400" height="100">
+    <img src="https://github.com/cchristico/JavascriptClases/blob/0.3Bootstrp/Informes/Infrome_3/imagenes/usoSmall.png?raw=true" alt="imagen cabecera" width="400" height="60">
 </p>
 
 - __Inline__ permite ingresar código dentro del texto.
@@ -211,7 +211,7 @@ Para trabajar con Bootstrap se puede descargar toda la libreria, o se puede usar
  <p>El tag para describir imaenes es <code>&lt;img&gt</code></p>
 ```
 <p aling="center">   
-    <img src="https://github.com/cchristico/JavascriptClases/blob/0.3Bootstrp/Informes/Infrome_3/imagenes/inline.png?raw=true" alt="imagen cabecera" width="400" height="100">
+    <img src="https://github.com/cchristico/JavascriptClases/blob/0.3Bootstrp/Informes/Infrome_3/imagenes/inline.png?raw=true" alt="imagen cabecera" width="400" height="60">
 </p>
 
 - __Instrucciones de usuario__ Para indicar alguna entrada por teclado, se utiliza ```<kbd>```
@@ -220,7 +220,7 @@ Para trabajar con Bootstrap se puede descargar toda la libreria, o se puede usar
   <kbd><kbd>ctrl</kbd> v <kbd>,</kbd></kbd>
   ```
   <p aling="center">   
-    <img src="https://github.com/cchristico/JavascriptClases/blob/0.3Bootstrp/Informes/Infrome_3/imagenes/instruccion.png?raw=true" alt="imagen cabecera" width="400" height="100">
+    <img src="https://github.com/cchristico/JavascriptClases/blob/0.3Bootstrp/Informes/Infrome_3/imagenes/instruccion.png?raw=true" alt="imagen cabecera" width="100" height="80">
 </p>
   
 - __Tablas__ existen modelos de tablas proporcionadas por Bootstrap, para lo cual se usa lo sigueinte:
@@ -259,7 +259,7 @@ Para trabajar con Bootstrap se puede descargar toda la libreria, o se puede usar
        </table>
 ```
   <p aling="center">   
-    <img src="https://github.com/cchristico/JavascriptClases/blob/0.3Bootstrp/Informes/Infrome_3/imagenes/tablas.png?raw=true" alt="imagen cabecera" width="400" height="100">
+    <img src="https://github.com/cchristico/JavascriptClases/blob/0.3Bootstrp/Informes/Infrome_3/imagenes/tablas.png?raw=true" alt="imagen cabecera" width="600" height="200">
 </p>
 
 - __Formulario__ Bootstrap  ayuda a la creacion de formularios con elementos como: cuadros de texto, radiobuttons, checks, lists...
@@ -295,7 +295,7 @@ El ejemplo mas básico es el siguite:
 </form>
 ```
   <p aling="center">   
-    <img src="https://github.com/cchristico/JavascriptClases/blob/0.3Bootstrp/Informes/Infrome_3/imagenes/formulario.png?raw=true" alt="imagen cabecera" width="400" height="100">
+    <img src="https://github.com/cchristico/JavascriptClases/blob/0.3Bootstrp/Informes/Infrome_3/imagenes/formulario.png?raw=true" alt="imagen cabecera" width="550" height="200">
 </p>
 
   <a name="conrec"></a>
