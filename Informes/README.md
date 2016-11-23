@@ -318,4 +318,4 @@ El ejemplo mas básico es el siguite:
 
 # ¡Gracias por su atención!
 
-Author: [Adrian Eguez](https://github.com/adrianeguez)
+Author: [Christian Castillo](https://github.com/cchristico)
