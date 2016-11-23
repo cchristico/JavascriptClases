@@ -1,2 +1,2 @@
 # Javascript Clases
-Este repositorio contiene una serie de practicas sobre html, css y javascript
+## Clase 7 NoJS
