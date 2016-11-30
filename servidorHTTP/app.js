@@ -1,21 +1,22 @@
 var express = require('express');
 var app = express();
 var puerto=5050;
+var contador=3;
 var usuario=[
     {
         id:1,
         nombre:'jose',
-        nombre:'123124'
+        ci:'123124'
     },
     {
         id:2,
         nombre:'marco',
-        nombre:'234324'
+        ci:'234324'
     },
     {
         id:3,
         nombre:'julio',
-        nombre:'0978888'
+        ci :'0978888'
     }
     
 ]
@@ -35,12 +36,28 @@ app.get('/Usuario/:idUsuario', function (req, res) {
                 {
                 res.json(usuario[i]);    
                 }
-                
-                
-                
         }
     res.json('Ya nada');        
     
+});
+app.post('/Usuario', function (req, res) { 
+if(!req.query.nombre)
+    {
+    res.send('No ingreso nombre');    
+    }
+    if(!req.query.ci)
+    {
+    res.send('No ingreso ci');    
+    }
+    
+     var nuevoUSr= {
+        id:contador+1,
+        nombre:req.query.nombre,
+        ci:req.query.ci
+    }
+     usuario.push(nuevoUSr);
+    contador=contador++;
+    res.json(nuevoUSr)
 });
 
 // This responds a POST request for the homepage
