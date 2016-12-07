@@ -1,4 +1,17 @@
 var express = require('express');
+var fs =require('fs');
+/*Primer parametro es el path, el 2 es la codificación :)*/
+var quePasa='';
+quePasa='esta por leer el archivo';
+console.log(quePasa);
+fs.readFile('./paginas/pagina.html',
+            'utf8', 
+            function(error,archivoLeido){
+   console.log(error);
+    console.log(archivoLeido);
+});
+quePasa='termino de leer el archivo';
+
 var app = express();
 var puerto=5050;
 var contador=3;
@@ -22,7 +35,19 @@ var usuario=[
 ]
 
 app.get('/TecnologiasWeb', function (req, res) {
-  res.send('Hello World!');
+  console.log('1 antes de leer');
+    fs.readFile('./paginas/pagina.html',
+            'utf8', 
+            function(error,archivoLeido){
+   console.log(error);
+    console.log(archivoLeido);
+        res.send(archivoLeido);
+        console.log('2 parece que termino de leer');
+        
+        
+});
+    
+    
 });
 
 app.get('/Usuarios', function (req, res) {
