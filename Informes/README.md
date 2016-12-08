@@ -4,11 +4,11 @@
 <img src="http://www.javatpoint.com/images/javascript/javascript_logo.png" width="300" height="200">
 </p>
 
-### Tema : `Introducción a la Web` 
-### Fecha : `2016-10-28`
+### Tema : `NPM-Express` 
+### Fecha : `2016-12-08`
 ### Estudiante : `Castillo Muñoz Christian Eduardo`
 ### Profesor : `Tania Calle - Adrian Eguez`
-### Número de informe : `1`
+### Número de informe : `4`
 
 <a name="cabecera"></a>
 ## Índice de contenidos
@@ -24,7 +24,7 @@
 
 <a name="tema"></a>
 ## Tema
-El tema de la práctica es: `Introduccion a la Web`
+El tema de la práctica es: `NPM-Express`
 
 <a name="objetivos"></a>
 ## Objetivos
@@ -36,33 +36,49 @@ El tema de la práctica es: `Introduccion a la Web`
 <a name="marco-teorico"></a>
 ## Marco Teorico
 <a name="defhtml"></a>
-### Internet
-La "Internet" es una colección de miles de redes de computadoras interconectadas en todo el mundo mediante cables y señales de telecomunicaciones, que utilizan una tecnología común para la transferencia de datos.
-## World Wide Web
+### NodeJS
+__Node.js__ es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome. Node.js usa un modelo de operaciones E/S sin bloqueo y orientado a eventos, que lo hace liviano y eficiente. El ecosistema de paquetes de Node.js, npm, es el ecosistema mas grande de librerías de código abierto en el mundo. [nodejs org](https://nodejs.org/es/)
 
-### Navegador
-La infromacion en la Web está disponible mediante páginas web. Estas páginas están escritas internamente en lenguaje HTML. Para transformar ese lenguaje en páginas Web visibles hace falta un programa, a estos programas se les llama navegadores o browsers.
- [Universidad Autónoma del Estado de Hidalgo](https://www.uaeh.edu.mx/docencia/P_Presentaciones/prepa3/Presentaciones_Enero_Junio_2014/Definicion%20de%20Internet.pdf))
-<br>
-<a href="#cabecera">Indice</a>
-
-<br><br>
 <p align="center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/WWW_logo_by_Robert_Cailliau.svg/240px-WWW_logo_by_Robert_Cailliau.svg.png" width="300" height="200">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2000px-Node.js_logo.svg.png" alt="icono NodeJS", width="290" height="190">
 </p>
-<br><br>
-<a name="hist"></a>
-### Historia y Facts
 
-La Web se desarrolló entre marzo de 1989 y diciembre de 1990.2 3 por el inglés Tim Berners-Lee con la ayuda del belga Robert Cailliau mientras trabajaban en el CERN en Ginebra, Suiza, y publicado en 1992. Desde entonces, Berners-Lee ha jugado un papel activo guiando el desarrollo de estándares Web (como los lenguajes de marcado con los que se crean las páginas web), y en los últimos años ha abogado por su visión de una Web semántica. Utilizando los conceptos de sus anteriores sistemas de hipertexto como ENQUIRE, el físico británico Tim Berners-Lee, un científico de la computación y en ese tiempo de los empleados del CERN, ahora director del World Wide Web Consortium (W3C), escribió una propuesta en marzo de 1989 con lo que se convertiría en la World Wide Web.4 la propuesta de 1989 fue destinada a un sistema de comunicación CERN pero Berners-Lee finalmente se dio cuenta que el concepto podría aplicarse en todo el mundo.5 En la CERN, la organización europea de investigación cerca de Ginebra, en la frontera entre Francia y Suiza,6 Berners-Lee y el científico de la computación belga Robert Cailliau propusieron en 1990 utilizar el hipertexto "para vincular y acceder a información de diversos tipos como una red de nodos en los que el usuario puede navegar a voluntad",7 y Berners-Lee terminó el primer sitio web en diciembre de ese año.8 Berners-Lee publicó el proyecto en el grupo de noticias alt.hypertext el 7 de agosto de 1991. (Fuente: <a href="https://es.wikipedia.org/wiki/World_Wide_Web">Wikipedia</a>)
-<br>
-<a href="#cabecera">A la cabecera</a>
+### npm
+__npm__ es el manejador de paquetes por defecto para Node.js, npm se ejecuta desde la linea de comandos y maneja las dependencias para una aplicación.1 2 Además, permite a los usuarios instalar aplicaciones Node.js que se encuentran en el repositorio. npm está escrito enteramente en JavaScrip.
+ [npm](https://www.npmjs.com/)
+ 
+<p align="center">
+<img src="https://partners.npmjs.com/weekly/weekly32/weekly-header-grace-hopper.png" width="700" height="200">
+</p>
+
+### Express
+Express es una infraestructura de aplicaciones web Node.js mínima y flexible que proporciona un conjunto sólido de características para las aplicaciones web y móviles.
+<p align="center">
+<img src="https://quickleft.com/wp-content/uploads/main_e18cb1f1-4642-4501-99a9-fe09268c20fb.png" width="700" height="200">
+</p>
 
 
-<a name="desarrollo"></a>
 ## Desarrollo del informe
 
-### Imagenes desde Github **IMPORTANTE**
+### Instalación Express
+-   Instalar Nodejs(manjaro Linux), para lo cual se ingresa en la consola y se digita:
+```
+$ yaourt -S node
+```
+-   Una vez instalado Node.js se debe crear un directorio el cual contendra la aplicación.
+```
+$ mkdir servidorHTTP
+$ cd servidorHTTP
+```
+- Dentre de la carpeta _servidorHTTP_ crear un archivo package.json, esto se lo consigue con:
+```
+$ npm init
+```
+- Crear el archivo app.js
+    * El directorio quedaria de la sigueite manera:
+<p align="center">
+<img src="https://github.com/cchristico/JavascriptClases/tree/0.8Node-JS_2/Informes/Infrome_1" width="200" height="200">
+</p>
 
 Se pueden usar imágenes desde nuestros archivos en github que constan de la siguiente URL:
 
