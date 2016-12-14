@@ -152,7 +152,7 @@ app.get('/TecnologiasWeb', function (req, res) {
 })
 ```
  <p align="center">
-<img src="https://github.com/cchristico/JavascriptClases/blob/0.8Node-JS_2/Informes/Imagenes/get_usuario.png?raw=true" width="200" height="200">
+<img src="https://github.com/cchristico/JavascriptClases/blob/0.8Node-JS_2/Informes/Imagenes/get_usuario.png?raw=true" width="800" height="200">
 </p>
 
 Para consultar un usuario en espesifico se denota:
@@ -172,7 +172,7 @@ app.get('/Usuario/:idUsuario', function (req, res) {
 });
 ```
  <p align="center">
-<img src="https://github.com/cchristico/JavascriptClases/blob/0.8Node-JS_2/Informes/Imagenes/get_usuario_esp.png?raw=true" width="200" height="200">
+<img src="https://github.com/cchristico/JavascriptClases/blob/0.8Node-JS_2/Informes/Imagenes/get_usuario_esp.png?raw=true" width="400" height="200">
 </p>
 
 
@@ -202,7 +202,7 @@ if(!req.query.nombre)
  ```
 Para comprovar se utiliza PostMan
  <p align="center">
-<img src="https://github.com/cchristico/JavascriptClases/blob/0.8Node-JS_2/Informes/Imagenes/postMan.png?raw=true" width="200" height="200">
+<img src="https://github.com/cchristico/JavascriptClases/blob/0.8Node-JS_2/Informes/Imagenes/postMan.png?raw=true" width="600" height="400">
 </p>
 
 - Para ingresar un usuario se implemtna el sigueinte código y se utiliza postman
@@ -228,7 +228,7 @@ app.post('/Usuario', function (req, res) {
     });
 ```
 <p align="center">
-<img src="https://github.com/cchristico/JavascriptClases/blob/0.8Node-JS_2/Informes/Imagenes/postMan_usr.png?raw=true" width="200" height="200">
+<img src="https://github.com/cchristico/JavascriptClases/blob/0.8Node-JS_2/Informes/Imagenes/postMan_usr.png?raw=true" width="600" height="400">
 </p>
 <a name="conrec"></a>
 <br>
