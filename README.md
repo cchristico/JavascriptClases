@@ -36,3 +36,6 @@ Para genear controladores se utilzai el siguiente comando:
 ```
 > sails generate controller Nombre del controlador
 ```
+
+# DEBER:
+Utilziar un paquete node, para enviar correos
