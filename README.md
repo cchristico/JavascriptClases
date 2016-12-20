@@ -27,3 +27,12 @@ sails pide opciones las cuales son:
 ## El servidor web de sail se encuntra en la carpeta _assets_
 
 ### Investigar sobre el grunt !!!!
+
+### Importante:
+no se necesita reinicar el servidor cunado se cambia vistas
+si es necesario reinicar cunado se hace modificaciones sobre el servidor
+## Generar controladores:
+Para genear controladores se utilzai el siguiente comando:
+```
+> sails generate controller Nombre del controlador
+```
