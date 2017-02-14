@@ -1,55 +1,46 @@
-<%
-if(!usuarioEditar)
-{
-  var usuarioEditar={
-  "nombres": "asdasda",
-  "apellidos": "asdasdasd",
-  "correo": "asd@gmail.com",
-  "tipo": "Usuarios",
-  "createdAt": "2017-02-14T18:11:29.535Z",
-  "updatedAt": "2017-02-14T18:11:29.535Z",
-  "id": 1
-}
-}
-%>
-<div style='background-color:white;color:black;'>
+<h1>Editar Usuario  - <%= usuarioAEditar.nombres %></h1>
 
-  <h1>Edita el Usuario <%=usuarioEditar.nombres%></h1>
-  <p>¡Edita el Usuario !</p>
-  <div class="row">
-    <div class="col-sm-8">
-      <form action="Usuario/EditarUsuarioForm" method="post">
-        <div class="form-group">
-          <label for="exampleInputEmail1">Nombres</label>
-          <input minlength=5 required type="text"
-          class="form-control"
-          placeholder="Nombres"
-          name="nombres"
-          values="<%=usuarioEditar.nombres%>">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Apellidos</label>
-          <input minlength=5 required type="text" class="form-control"  placeholder="Apellidos" name="apellidos">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Correo</label>
-          <input type="email" class="form-control"  placeholder="Correo" name="correo">
-        </div>
-        <input type="hidden" name="id" value="<%=usuarioEditar.id%>">
-        <button type="submit" class="btn btn-success">Editar Usuario</button>
-        <br>
 
-      </form>
+<div class="row">
+    <div class="col-sm-5">
+
+        <form action="/Usuario/EditarUsuario" method="post">
+            <div class="form-group">
+                <label>Nombres</label>
+
+                <input type="text" class="form-control" placeholder="Ingrese sus Nombres" name="nombres" value="<%= usuarioAEditar.nombres %>">
+
+
+            </div>
+            <div class="form-group">
+                <label>Apellidos</label>
+                <input type="text" class="form-control" placeholder="Ingrese sus Apellidos" name="apellidos" value="<%= usuarioAEditar.apellidos %>">
+            </div>
+
+            <div class="form-group">
+                <label>Correo</label>
+
+
+                <input type="email" class="form-control" placeholder="Ingrese su correo" name="correo" value="<%= usuarioAEditar.correo %>">
+
+                <input type="hidden" name="idUsuario" value="<%= usuarioAEditar.id %>">
+
+
+
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Editar Usuario :)</button>
+        </form>
+
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-2"></div>
 
-      <h3 class="text-center"> <%=usuarioEditar.apellidos%></h3>
-        <h4 class="text-center"> <%=usuarioEditar.nombres%></h4>
-        <p class="text-center">
-          <%= usuarioEditar.correo == '' ? 'Sin correo' : usuarioEditar.correo%>
+    <div class="col-sm-5 text-center">
+
+        <h2><%= usuarioAEditar.apellidos%></h2>
+        <h4><%= usuarioAEditar.nombres%></h4>
+        <p>
+            <%= usuarioAEditar.correo%>
         </p>
+
     </div>
-  </div>
-
-
 </div>

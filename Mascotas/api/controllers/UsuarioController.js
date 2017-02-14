@@ -9,183 +9,199 @@
 
 module.exports = {
 
-  crearUsuario: function (req, res) {
-    //   Se accede asi: /Usuario/crearUsuario
+    crearUsuario: function (req, res) {
 
-    // Guardando todos los parametros en la variable parametros
+        if (req.method == "POST") {
 
-    var parametros = req.allParams();
-    console.log(parametros);
-    console.log('sacudelo');
-    console.log(req.method);
+            var parametros = req.allParams();
+
+            if (parametros.nombres && parametros.apellidos) {
+
+                var usuarioCrear = {
+                    nombres: parametros.nombres,
+                    apellidos: parametros.apellidos,
+                    correo: parametros.correo
+                }
+
+                if (usuarioCrear.correo == "") {
+                    delete usuarioCrear.correo
+                }
+
+                Usuario.create(usuarioCrear).exec(function (err, usuarioCreado) {
+
+                    if (err) {
+                        return res.view('vistas/Error', {
+                            error: {
+                                desripcion: "Fallo al crear el Usuario",
+                                rawError: err,
+                                url: "/CrearUsuario"
+                            }
+
+                        });
+                    }
+
+                    Usuario.find()
+                        .exec(function (errorIndefinido, usuariosEncontrados) {
+
+                            if (errorIndefinido) {
+                                res.view('vistas/Error', {
+                                    error: {
+                                        desripcion: "Hubo un problema cargando los Usuarios",
+                                        rawError: errorIndefinido,
+                                        url: "/ListarUsuarios"
+                                    }
+                                });
+                            }
+
+                            res.view('vistas/Usuario/ListarUsuarios', {
+                                usuarios: usuariosEncontrados
+                            });
+                        })
+
+                })
 
 
-    if (req.method == 'POST') {
-      if (parametros.nombres && parametros.apellidos) {
-        //creo el usuario
-        Usuario.create({
-          nombres: parametros.nombres,
-          apellidos: parametros.apellidos,
-          correo: parametros.correo
-        }).exec(function (error, usuarioCreado) {
-          if (error) return res.serverError()
-          sails.log.info(usuarioCreado);
+            } else {
+
+                return res.view('vistas/Error', {
+                    error: {
+                        desripcion: "Llena todos los parametros, apellidos y nombres",
+                        rawError: "Fallo en envio de parametros",
+                        url: "/CrearUsuario"
+                    }
+
+                });
+
+            }
 
 
+        } else {
 
-          Usuario.find({
-            skip: 1
-          }).exec(function (error, usuariosEncontrados) {
-            if (error) return res.serverError()
-            sails.log.info(usuariosEncontrados);
-            return res.view('vistas/listarUsuarios', {
-              title: 'Lista de Usuarios',
-              usuarios: usuariosEncontrados
-            })
-          });
-
-
-
-
-        });
-      } else {
-        // bad Request
-        return res.view('error', {
-          title: 'Error',
-          error: {
-            descripcion: 'No envia todos los parametros'
-          }
-        });
-      }
-    } else {
-      return res.view('error', {
-        title: 'Error',
-        error: {
-          descripcion: 'Falla en el metodo HTTP'
-        }
-      });
-    }
-
-  },
-  crearUsuarioForm: function (req, res) {
-
-    var parametros = req.allParams();
-    console.log(parametros);
-
-    console.log('Metodo:', req.method);
-    if (req.method == 'POST') {
-      if (parametros.nombres && parametros.apellidos) {
-        //creo el usuario
-        console.log('Va a crear el usuario.')
-        Usuario.create({
-          nombres: parametros.nombres,
-          apellidos: parametros.apellidos,
-          correo: parametros.correo
-        }).exec(function (error, usuarioCreado) {
-          if (error) {
-            return res.view('error', {
-              title: 'Error',
-              error: {
-                descripcion: 'hubo un error enviando los parametros:',
-                error,
-                url: '/crearUsuario'
-              }
+            return res.view('vistas/Error', {
+                error: {
+                    desripcion: "Error en el uso del Metodo HTTP",
+                    rawError: "HTTP Invalido",
+                    url: "/CrearUsuario"
+                }
             });
-          }
-          sails.log.info('Se creo el usuario: ', usuarioCreado);
 
-          Usuario.find().exec(function (error, usuariosEncontrados) {
-            if (error) return res.serverError()
-            sails.log.info(usuariosEncontrados);
-            return res.view('vistas/listarUsuarios', {
-              title: 'Lista de Usuarios',
-              usuarios: usuariosEncontrados
-            })
-          });
-        });
-
-      } else {
-        // bad Request
-        console.log('NO PARAMETROS');
-        return res.view('error', {
-          title: 'Error',
-          error: {
-            descripcion: 'No envia todos los parametros',
-            url: '/crearUsuario'
-          }
-        });
-      }
-    } else {
-      console.log('POST');
-      return res.view('error', {
-        title: 'Error',
-        error: {
-          descripcion: 'Falla en el metodo HTTP',
-          url: '/crearUsuario'
         }
-      });
-    }
 
-  },
-  editarUsuarioForm: function (req, res) {
+    },
+    BorrarUsuario: function (req, res) {
 
-    var parametros = req.allParams();
-    if (req.method == 'POST') {
-      if (parametros.nombres && parametros.apellidos && parametros.id) {
-        //creo el usuario
-        console.log('Va a actualizar el usuario.')
-        Usuario.update({
-          id: parametros.id
-        }, {
-          nombres: parametros.nombres,
-          apellidos: parametros.apellidos,
-          correo: parametros.correo
-        }).exec(function (error, usuarioCreado) {
-          if (error) {
-            return res.view('error', {
-              title: 'Error',
-              error: {
-                descripcion: 'hubo un error enviando los parametros:',
-                error,
-                url: '/crearUsuario'
-              }
+        var parametros = req.allParams();
+
+        if (parametros.id) {
+
+            Usuario.destroy({
+                id: parametros.id
+            }).exec(function (errorInesperado, UsuarioRemovido) {
+                if (errorInesperado) {
+                    return res.view('vistas/Error', {
+                        error: {
+                            desripcion: "Tuvimos un Error Inesperado",
+                            rawError: errorInesperado,
+                            url: "/ListarUsuarios"
+                        }
+                    });
+                }
+                Usuario.find()
+                    .exec(function (errorIndefinido, usuariosEncontrados) {
+
+                        if (errorIndefinido) {
+                            res.view('vistas/Error', {
+                                error: {
+                                    desripcion: "Hubo un problema cargando los Usuarios",
+                                    rawError: errorIndefinido,
+                                    url: "/ListarUsuarios"
+                                }
+                            });
+                        }
+
+                        res.view('vistas/Usuario/ListarUsuarios', {
+                            usuarios: usuariosEncontrados
+                        });
+                    })
+            })
+
+        } else {
+            return res.view('vistas/Error', {
+                error: {
+                    desripcion: "Necesitamos el ID para borrar al Usuario",
+                    rawError: "No envia ID",
+                    url: "/ListarUsuarios"
+                }
             });
-          }
-          sails.log.info('Se actualizo el usuario: ', usuarioCreado);
-
-          Usuario.find().exec(function (error, usuariosEncontrados) {
-            if (error) return res.serverError()
-            sails.log.info(usuariosEncontrados);
-            return res.view('vistas/listarUsuarios', {
-              title: 'Lista de Usuarios',
-              usuarios: usuariosEncontrados
-            })
-          });
-
-        });
-
-      } else {
-        // bad Request
-        console.log('NO PARAMETROS');
-        return res.view('error', {
-          title: 'Error',
-          error: {
-            descripcion: 'No envia todos los parametros',
-            url: '/crearUsuario'
-          }
-        });
-      }
-    } else {
-      console.log('POST');
-      return res.view('error', {
-        title: 'Error',
-        error: {
-          descripcion: 'Falla en el metodo HTTP',
-          url: '/crearUsuario'
         }
-      });
+    },
+    editarUsuario: function (req, res) {
+
+        var parametros = req.allParams();
+
+        if (parametros.idUsuario && (parametros.nombres || parametros.apellidos || parametros.correo)) {
+
+            var usuarioAEditar = {
+                nombres: parametros.nombres,
+                apellidos: parametros.apellidos,
+                correo: parametros.correo
+            }
+
+            if (usuarioAEditar.nombres == "") {
+                delete usuarioAEditar.nombres
+            }
+            if (usuarioAEditar.apellidos == "") {
+                delete usuarioAEditar.apellidos
+            }
+            if (usuarioAEditar.correo == "") {
+                delete usuarioAEditar.correo
+            }
+            Usuario.update({
+                    id: parametros.idUsuario
+                }, usuarioAEditar)
+                .exec(function (errorInesperado, UsuarioRemovido) {
+                    if (errorInesperado) {
+                        return res.view('vistas/Error', {
+                            error: {
+                                desripcion: "Tuvimos un Error Inesperado",
+                                rawError: errorInesperado,
+                                url: "/ListarUsuarios"
+                            }
+                        });
+                    }
+
+                    Usuario.find()
+                        .exec(function (errorIndefinido, usuariosEncontrados) {
+
+                            if (errorIndefinido) {
+                                res.view('vistas/Error', {
+                                    error: {
+                                        desripcion: "Hubo un problema cargando los Usuarios",
+                                        rawError: errorIndefinido,
+                                        url: "/ListarUsuarios"
+                                    }
+                                });
+                            }
+
+                            res.view('vistas/Usuario/ListarUsuarios', {
+                                usuarios: usuariosEncontrados
+                            });
+                        })
+
+                })
+        } else {
+            return res.view('vistas/Error', {
+                error: {
+                    desripcion: "Necesitamos que envies el ID y el nombre, apellido o correo",
+                    rawError: "No envia Parametros",
+                    url: "/ListarUsuarios"
+                }
+            });
+        }
+
+
+
     }
 
-  }
 
 };

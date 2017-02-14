@@ -19,7 +19,8 @@ module.exports = {
        correo:{
            type:'string',
            email:true,
-           defaultsTo:'correo@invalido.com'
+           required:true,
+           unique:true
        },
        tipo:{
            type:'string',
@@ -28,6 +29,12 @@ module.exports = {
        }
 
 
-  }
-};
+  },
+   beforeCreate: function (values, cb) {
 
+     //sails.log.info(values);
+
+    //  cb()
+    //  cb()
+   }
+};

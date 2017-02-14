@@ -28,7 +28,7 @@ var parametros
   })
 },
 editarUsuario:function(req, res){
-  var parametros = re.allParams();
+  var parametros = req.allParams();
   if(parametros.id)
   {
     Usuario.findOne({
