@@ -31,7 +31,12 @@ module.exports.routes = {
   * `assets` directory)                                                      *
   *                                                                          *
   ***************************************************************************/
+  'get /': 'RutasController.home',
+  'get /Inicio': 'RutasController.home',
 
+
+  'get /CrearUsuario': 'RutasController.crearUsuario',
+  'get /ListarUsuarios': 'RutasController.listarUsuarios',
   '/': {
     view: 'homepage'
   },
@@ -44,7 +49,7 @@ module.exports.routes = {
        '/Cuenca':{
         view:'cuenca'
     }
-    
+
 
   /***************************************************************************
   *                                                                          *
