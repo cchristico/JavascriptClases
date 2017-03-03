@@ -13,6 +13,9 @@ module.exports = {
     crearUsuario: function (req, res) {
         return res.view('vistas/Usuario/crearUsuario');
     },
+  crearRaza: function (req, res) {
+    return res.view('vistas/Raza/crearRaza');
+  },
     login:function(req,res)
     {
       return res.view('/login',{

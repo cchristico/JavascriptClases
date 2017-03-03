@@ -5,7 +5,7 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
-var Passwords = require('machinepack-passwords');
+//var Passwords = require('machinepack-passwords');
 
 
 module.exports = {
@@ -27,7 +27,7 @@ module.exports = {
             required:true,
             unique:true
         },
-        password: {
+/*        password: {
             type: 'string',
             defaultsTo: "123456"
         }
@@ -67,13 +67,8 @@ module.exports = {
             });
         } else {
             cb()
-        }
+        }*/
 
 
     }
-
-
-
-
-
 };
