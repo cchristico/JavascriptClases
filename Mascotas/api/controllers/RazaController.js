@@ -159,6 +159,14 @@ module.exports = {
         }
       });
     }
+  },
+  crearMascota: function (req,res) {
+    Raza.find().exec(function (err,razasEncontradas) {
+      if(err) return res.serverError();
+      return res.view('vistas/Mascota/crearMascota',{
+        razas: razasEncontradas
+      });
+    });
   }
 };
 

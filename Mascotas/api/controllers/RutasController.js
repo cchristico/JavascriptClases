@@ -68,7 +68,7 @@ module.exports = {
             error: {
               desripcion: "Hubo un problema cargando las razas",
               rawError: errorIndefinido,
-              url: "/ListarEquipo"
+              url: "/ListarRazas"
             }
           });
         }
@@ -117,8 +117,6 @@ module.exports = {
         });
       })
   },
-
-
   editarUsuario: function (req, res) {
 
     var parametros = req.allParams();
@@ -162,7 +160,74 @@ module.exports = {
       });
 
     }
+  },
+  crearMascota: function (req,res) {
+    Raza.find().exec(function (error, razasEncontrados) {
+      if (error) return res.serverError();
+      return res.view('vistas/Mascota/CrearMascota', {
+        title: 'Crear Mascota',
+        razas: razasEncontrados
+      });
+    });
+  },
+  listarMascotas: function (req,res) {
+
+    Mascota.find()
+      .exec(function (errorIndefinido, MascotasEncontradas) {
+        if (errorIndefinido) {
+          res.view('vistas/Error', {
+            error: {
+              desripcion: "Hubo un problema cargando las razas",
+              rawError: errorIndefinido,
+              url: "/ListarMascotas"
+            }
+          });
+        }
+        res.view('vistas/Mascota/listarMascotas', {
+          mascotas: MascotasEncontradas
+        });
+      })
+  },
+  editarMascotas: function(req,res){
+    var parametros = req.allParams();
+    if (parametros.id) {
+      Mascota.findOne({
+        id: parametros.id
+      }).exec(function (error, mascotaEncontrado) {
+        if (error) return res.view('error', {
+          title: 'Error',
+          error: {
+            descripcion: 'Fallo al buscar la mascota',
+            url: '/crearMascotas'
+          }
+        });
+
+
+        Raza.find().exec(function (error, razasEncontrados) {
+          if (error) return res.view('error', {
+            title: 'Error',
+            error: {
+              descripcion: 'Fallo al buscar la mascota',
+              url: '/crearMascotas'
+            }
+          });
+
+          return res.view('vistas/Mascota/editarMascotas', {
+            title: 'Editar Mascota - ' + mascotaEncontrado.nombre,
+            mascotas: mascotaEncontrado,
+            razas: razasEncontrados
+          })
+        });
+
+      });
+
+    } else {
+      return res.view('error', {
+        title: 'Error',
+        error: {
+          descripcion: 'No existe el ID'
+        }
+      });
+    }
   }
-
-
 };

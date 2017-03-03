@@ -1,0 +1,64 @@
+<h1>Editar Mascota - <%= mascotas.nombre %></h1>
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-md-6">
+    <form action="/Mascota/EditarMascota" method="post">
+      <div class="form-group">
+        <label class="col-md-2 control-label">Nombre: </label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input type="text" class="form-control" placeholder="Ingrese sus Nombres" name="nombre"
+                 value="<%= mascotas.nombre %>">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-2 control-label">Fecha Nacimineto:</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+          <input type="date" class="form-control" name="fechaAparicion" value="<%= mascotas.fechaNacimiento %>">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-2 control-label">Lugar Nacimiento: </label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-pushpin"></i></span>
+          <input type="text" class="form-control" placeholder="Ingrese el país de residencia" name="continenteOrigen"
+                 value="<%= mascotas.paisNacimiento %>">
+        </div>
+      </div>
+      <div class="form-group">
+      <label class="col-md-2 control-label" for="">Raza</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-pushpin"></i></span>
+      <select class="form-control" name="idRaza" value="<%= mascotas.idRaza %>">
+        <% for(var i=0; i<razas.length; i++){ %>
+        <option value='<%=razas[i].id%>'>
+          <%=razas[i].nombre%>
+        </option>
+        <%  } %>
+      </select>
+        </div>
+      </div>
+      <div hidden>
+        <input type="text" class="form-control" name="id" value="<%= mascotas.id %>">
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-success btn-block">Editar Mascota</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <div class="col-sm-2"></div>
+
+  <div class="col-sm-4 text-center">
+
+    <h2><%= mascotas.nombre %></h2>
+    <h4><%= mascotas.fechaNacimiento %></h4>
+    <p>
+      <%= mascotas.paisNacimiento %>
+    </p>
+  </div>
+</div>

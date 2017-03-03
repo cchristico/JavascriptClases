@@ -10,11 +10,11 @@ module.exports = {
     var parameters = req.allParams();
 
     if (req.method == 'POST') {
-      if (parameters.nombre && (parameters.continenteOrigen && parameters.idRaza)) {
+      if (parameters.nombre && (parameters.fechaNacimiento && parameters.paisNacimiento&&parameters.idRaza)) {
         Mascota.create({
           nombre: parameters.nombre,
-          fechaAparicion: parameters.fechaAparicion,
-          continenteOrigen: parameters.continenteOrigen,
+          fechaNacimiento: parameters.fechaNacimiento,
+          paisNacimiento: parameters.paisNacimiento,
           idRaza: parameters.idRaza,
         }).exec(function (error, mascotaCreado) {
           if (error) return res.view('error', {
@@ -28,7 +28,7 @@ module.exports = {
           Mascota.find().exec(function (error, mascotasEncontrados) {
             if (error) return res.serverError()
             sails.log.info(mascotasEncontrados);
-            return res.view('vistas/Mascota/listarMascotas', {
+            return res.view('vistas/Mascota/listarMascotas.ejs', {
               title: 'Lista de Mascotas',
               mascotas: mascotasEncontrados
             })
@@ -83,7 +83,7 @@ module.exports = {
 
           Mascota.find().exec(function (error, mascotasEncontrados) {
             if (error) return res.serverError()
-            return res.view('vistas/Mascota/listarMascotas', {
+            return res.view('vistas/Mascota/listarMascotas.ejs', {
               title: 'Lista de Mascotas',
               mascotas: mascotasEncontrados
             })

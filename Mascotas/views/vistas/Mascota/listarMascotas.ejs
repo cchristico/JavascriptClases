@@ -1,0 +1,45 @@
+<h1>Lista de mascotas</h1>
+
+<div class="row">
+  <div class="col-sm-9">
+    <p>Listado de las Mascotas</p>
+  </div>
+  <div class="col-sm-3">
+    <a href="/CrearMascota" class="btn btn-block btn-success">
+      Crear Mascota
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <%for(var i=0; i<mascotas.length; i++) {%>
+
+  <div class="col-sm-4">
+    <div class="text-center ma-borde ma-padding-top-bottom">
+      <h1> <%= mascotas[i].nombre %></h1>
+      <div class="text-center ma-borde" style="margin-top: 40px;">
+        <p>
+          <%= mascotas[i].nombre %>
+          <br>
+          <%= mascotas[i].fechaNacimiento %>
+        </p>
+        <p>
+          <%= mascotas[i].paisNacimiento %>
+        </p>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <a href="/Mascota/BorrarMascota?id=<%= mascotas[i].id %>" class="btn btn-danger btn-block">Borrar</a>
+
+    </div>
+    <div class="col-sm-4">
+      <a href="/EditarMascotas?id=<%= mascotas[i].id %>" class="btn btn-primary btn-block">Editar</a>
+    </div>
+    <div class="col-sm-4">
+    </div>
+  </div>
+
+
+  <% }%>
+</div>

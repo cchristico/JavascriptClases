@@ -51,7 +51,10 @@ module.exports.routes = {
 
   'get /CrearRaza': 'RutasController.crearRaza',
   'get /EditarRaza': 'RutasController.editarRaza',
-  'get /ListarRazas': 'RutasController.listarRazas'
+  'get /ListarRazas': 'RutasController.listarRazas',
+  'get /CrearMascota': 'RutasController.crearMascota',
+  'get /ListarMascotas': 'RutasController.listarMascotas',
+  'get /EditarMascotas': 'RutasController.editarMascotas'
    //'get /Login': 'RutasController.login'
 
 
