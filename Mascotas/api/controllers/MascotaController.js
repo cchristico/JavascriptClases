@@ -56,18 +56,18 @@ module.exports = {
     }
 
   },
-  editarMascota: function (req, res) {
-
+  editarMascotas: function (req, res) {
+  console.log("llego a actualziar");
     var parameters = req.allParams();
+    console.log(parameters.nombre+"__"+parameters.paisNacimiento+"__"+parameters.idRaza+"__"+"__"+parameters.fechaNacimiento);
     if (req.method == 'POST') {
-      if (parameters.nombre && parameters.continenteOrigen && parameters.idRaza) {
-
+      if (parameters.nombre && (parameters.paisNacimiento &&parameters.fechaNacimiento)) {
         Mascota.update({
           id: parameters.id
         }, {
           nombre: parameters.nombre,
-          fechaAparicion: parameters.fechaAparicion,
-          continenteOrigen: parameters.continenteOrigen,
+          fechaNacimiento: parameters.fechaNacimiento,
+          paisNacimiento: parameters.paisNacimiento,
           idRaza: parameters.idRaza
         }).exec(function (error, mascotaCreado) {
           if (error) {
@@ -79,11 +79,17 @@ module.exports = {
               }
             });
           }
-
-
           Mascota.find().exec(function (error, mascotasEncontrados) {
-            if (error) return res.serverError()
-            return res.view('vistas/Mascota/listarMascotas.ejs', {
+            if (error) {
+              return res.view('vistas/Error', {
+                title: 'Error',
+                error: {
+                  descripcion: 'Hubo un error editando la mascota, verifique la información: ' + error,
+                  url: '/crearMascota'
+                }
+              });
+            }
+            return res.view('vistas/Mascota/listarMascotas', {
               title: 'Lista de Mascotas',
               mascotas: mascotasEncontrados
             })
@@ -93,12 +99,12 @@ module.exports = {
 
       } else {
         // bad Request
-        console.log('NO parameters');
+        console.log('NO envio valores');
         return res.view('vistas/Error', {
           title: 'Error',
           error: {
             descripcion: 'No envia todos los parameters',
-            url: '/editarMascota'
+            url: '/EditarMascotas'
           }
         });
       }
