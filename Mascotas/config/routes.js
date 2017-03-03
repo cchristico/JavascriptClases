@@ -50,6 +50,8 @@ module.exports.routes = {
    'get /Error': 'RutasController.error',
 
   'get /CrearRaza': 'RutasController.crearRaza',
+  'get /EditarRaza': 'RutasController.editarRaza',
+  'get /ListarRazas': 'RutasController.listarRazas'
    //'get /Login': 'RutasController.login'
 
 

@@ -10,11 +10,20 @@ module.exports = {
   attributes: {
     nombre: {
       type: 'string',
-      enum: ['Bulldog', 'Chihuahua', 'Pitbull'],
       required: true
     },
+    continenteOrigen: {
+      type: 'string',
+      enum: ['America', 'Asia', 'Africa','Europa','Ociania']
+    },
+    fechaAparicion: {
+      type: 'date'
+    },
+    // idRaza es el nombre del Foreign Key
     mascotas: {
+      // Collection -> Nombre del Modelo en Sails
       collection: 'Mascota',
+      // Via-> Es el campo por el cual vamos a relacionar FOREIGN KEY
       via: 'idRaza'
     }
   }

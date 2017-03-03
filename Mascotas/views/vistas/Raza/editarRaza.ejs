@@ -1,0 +1,51 @@
+<h1>Editar Raza - <%= razas.nombre %></h1>
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-md-6">
+    <form action="/Raza/EditarRaza" method="post">
+      <div class="form-group">
+        <label class="col-md-2 control-label">Nombre: </label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input type="text" class="form-control" placeholder="Ingrese sus Nombres" name="nombre"
+                 value="<%= razas.nombre %>">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-2 control-label">Fecha Aparición:</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+          <input type="date" class="form-control" name="fechaAparicion" value="<%= razas.fechaAparicion %>">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-2 control-label">Lugar de origen: </label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-pushpin"></i></span>
+          <input type="text" class="form-control" placeholder="Ingrese el país de residencia" name="continenteOrigen"
+                 value="<%= razas.continenteOrigen %>">
+        </div>
+      </div>
+      <div hidden>
+        <input type="text" class="form-control" name="id" value="<%= razas.id %>">
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-success btn-block">Editar Raza</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <div class="col-sm-2"></div>
+
+  <div class="col-sm-4 text-center">
+
+    <h2><%= razas.nombre %></h2>
+    <h4><%= razas.fechaAparicion %></h4>
+    <p>
+      <%= razas.continenteOrigen %>
+    </p>
+  </div>
+</div>
