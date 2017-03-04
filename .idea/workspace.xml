@@ -4,11 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9af34c13-1b41-4781-bfa9-a069ceaf4315" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mascotas/api/controllers/MascotaController.js" afterPath="$PROJECT_DIR$/Mascotas/api/controllers/MascotaController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mascotas/views/vistas/Mascota/editarMascotas.ejs" afterPath="$PROJECT_DIR$/Mascotas/views/vistas/Mascota/editarMascotas.ejs" />
-    </list>
+    <list default="true" id="9af34c13-1b41-4781-bfa9-a069ceaf4315" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -522,12 +518,12 @@
       <option name="presentableId" value="Default" />
       <updated>1488519927857</updated>
       <workItem from="1488519929504" duration="1752000" />
-      <workItem from="1488503831195" duration="14702000" />
+      <workItem from="1488503831195" duration="14771000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16454000" />
+    <option name="totallyTimeSpent" value="16523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
