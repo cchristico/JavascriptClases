@@ -130,7 +130,7 @@ Grunt y los plugins de Grunt son instalados y administrados via npm. Cuando se e
 <br>
 * El código ingresado sera el sigueinte:
 <p align="center">
-  <img src="https://github.com/cchristico/JavascriptClases/blob/10.Sails2/Informes/imagenes/route.png?raw=true" width="120" height="210">
+  <img src="https://github.com/cchristico/JavascriptClases/blob/10.Sails2/Informes/imagenes/route.png?raw=true" width="270" height="260">
   </p>
 <br>
 - Para generar _controladores_ se debe escribr el sigueinte código:<br>
@@ -138,7 +138,7 @@ Grunt y los plugins de Grunt son instalados y administrados via npm. Cuando se e
   * Se creara un archivo en la carpeta controllers que se encuntra en api:
   
   <p align="center">
-  <img src="https://github.com/cchristico/JavascriptClases/blob/10.Sails2/Informes/imagenes/S01.png?raw=true" width="120" height="210">
+  <img src="https://github.com/cchristico/JavascriptClases/blob/10.Sails2/Informes/imagenes/S01.png?raw=true" width="200" height="210">
   </p>
  - Se ingresa el sigueinte código:<br>
 `
